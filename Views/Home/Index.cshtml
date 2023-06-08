@@ -11,18 +11,22 @@
     <form class="shadow p-3 rounded text-center"  asp-controller="Home" asp-action="Create" method="post">
         <div class="mb-3">
             <label asp-for="Name"></label>
+            <span asp-validation-for="Name" class="text-dange font-weight-bold"></span>
             <input class="form-control" asp-for="Name">
         </div>
         <div class="mb-3">
             <label asp-for="Location"></label>
+            <span asp-validation-for="Location" class="text-dange font-weight-bold"></span>
             <input class="form-control" asp-for="Location">
         </div>
         <div class="mb-3">
             <label asp-for="Language"></label>
+            <span asp-validation-for="Language" class="text-dange font-weight-bold"></span>
             <input class="form-control" asp-for="Language">
         </div>
         <div class="mb-3">
             <label asp-for="Comment"></label>
+            <span asp-validation-for="Comment" class="text-dange font-weight-bold"></span>
             <textarea class="form-control" asp-for="Comment"></textarea>
         </div>
 

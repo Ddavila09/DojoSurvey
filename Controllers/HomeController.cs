@@ -22,6 +22,13 @@ public class HomeController : Controller
     [HttpPost("results")]
     public IActionResult Create (Student newStudent)
     {
+        if (!ModelState.IsValid)
+        {
+            return View("Index");
+        }
+
+        
+
         Console.WriteLine($"{newStudent.Name} studies in {newStudent.Location} and they love {newStudent.Language}. This is what they have to say {newStudent.Comment}");
         return View("Submitted", newStudent);
     }
