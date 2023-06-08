@@ -1,0 +1,51 @@
+@model Student
+
+<style>
+    .box {
+        border: 1px solid #dee2e6;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .box label {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .box-header h4 {
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    .box p {
+        text-align: right;
+        display: inline-block;
+        margin-left: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="box">
+        <div class="box-header">
+            <h4>Submitted Info</h4>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <p>@Model.Name</p>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <p>@Model.Location</p>
+        </div>
+        <div class="form-group">
+            <label for="language">Language:</label>
+            <p>@Model.Language</p>
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <p>@Model.Comment</p>
+        </div>
+        <input type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Go back" />
+    </div>
+
+</div>
